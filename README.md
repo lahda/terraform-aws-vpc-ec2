@@ -35,7 +35,8 @@ terraform-aws-vpc-ec2/
 
 1. Cloner le dépôt :
 ```bash
-git clone https://github.com/votre-utilisateur/terraform-aws-vpc-ec2.git
+git clone (https://github.com/lahda/terraform-aws-vpc-ec2.git)
+
 cd terraform-aws-vpc-ec2
 
 2. Initialiser Terraform :
@@ -52,3 +53,35 @@ http://<IP_PUBLIQUE_EC2>
 
 6. Détruire l'infrastructure :
 terraform destroy -auto-approve
+
+Configuration
+Modifier les variables dans variables.tf pour personnaliser :
+
+variable "aws_region" {
+  default = "eu-west-3" # Région AWS
+}
+
+variable "vpc_cidr" {
+  default = "10.0.0.0/16" # CIDR du VPC
+}
+
+variable "instance_type" {
+  default = "t2.micro" # Type d'instance EC2
+}
+
+Sécurité
+
+La clé SSH spécifiée dans variables.tf doit exister dans AWS
+
+Le groupe de sécurité permet :
+
+SSH (port 22) depuis n'importe quelle IP (à restreindre en production)
+
+HTTP (port 80) depuis tout le monde
+
+Toutes les connexions sortantes
+
+Auteurs
+Lahda Biassou alphonsine - @lahda
+
+Note : Adapter les CIDR et paramètres régionaux selon vos besoins. Vérifier les coûts AWS avant déploiement.
