@@ -22,13 +22,13 @@ Déploiement d'une infrastructure AWS comprenant un VPC, sous-réseaux publics/p
 ## Structure du Projet
 
 terraform-aws-vpc-ec2/
-├── providers.tf # Configuration des providers
-├── variables.tf # Variables globales
-├── vpc.tf # Ressources réseau (VPC, subnets, NAT, etc.)
-├── ec2.tf # Configuration EC2
-├── security_groups.tf # Règles de sécurité
-├── outputs.tf # Sorties Terraform
-└── user-data.sh # Script de bootstrap pour l'instance
+- ├── providers.tf # Configuration des providers
+- ├── variables.tf # Variables globales
+- ├── vpc.tf # Ressources réseau (VPC, subnets, NAT, etc.)
+- ├── ec2.tf # Configuration EC2
+- ├── security_groups.tf # Règles de sécurité
+- ├── outputs.tf # Sorties Terraform
+- └── user-data.sh # Script de bootstrap pour l'instance
 
 
 ## Utilisation
